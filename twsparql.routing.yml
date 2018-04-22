@@ -1,0 +1,16 @@
+twsparql.settings:
+  path: 'admin/config/content/twsparql'
+  defaults:
+    _form: '\Drupal\twsparql\Form\TWSparqlSettingsForm'
+    _title: 'TW SPARQL Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+twsparql.content:
+  path: '/twsparql/query'
+  defaults:
+    _controller: '\Drupal\twsparql\Controller\TWSparqlController::content'
+  methods:  [GET]
+  requirements:
+    _permission: 'access content'
+

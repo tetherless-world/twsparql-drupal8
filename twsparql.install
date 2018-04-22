@@ -1,0 +1,22 @@
+<?php
+// $Id$
+
+
+/**
+ * Implementation of hook_install()
+ */
+function twsparql_install() {
+}
+
+/**
+ * Implementation of hook_uninstall()
+ */
+function twsparql_uninstall() {
+}
+
+/**
+ * Implementation of hook_schema()
+ * @return array of Schema API table definitions.
+ */
+function twsparql_schema() {
+}

@@ -1,0 +1,29 @@
+twsparql.settings:
+  type: config_object
+  label: "Setting for twsparql module"
+  mapping:
+    endpoint:
+      type: string
+      label: 'Default SPARQL Endpoint'
+    default_transform:
+      type: string
+      label: 'Default XSL Transform'
+    queries:
+      type: string
+      label: 'Relative Path to Named Queries'
+    xslt:
+      type: string
+      label: 'Relative Path to XSL Transforms'
+    instances_uri:
+      type: string
+      label: 'Base URI for Instances'
+    schema_uri:
+      type: string
+      label: 'Base URI for Schema'
+    enable_php_xslt_extensions:
+      type: integer
+      label: 'Base URI for Schema'
+    enable_debug:
+      type: integer
+      label: 'Base URI for Schema'
+

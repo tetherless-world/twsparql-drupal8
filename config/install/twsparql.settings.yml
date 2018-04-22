@@ -1,0 +1,9 @@
+endpoint: 'http://tw.rpi.edu:2020/books'
+default_transform: 'https://tw.rpi.edu/xslt/default.xsl'
+queries: 'https://tw.rpi.edu/queries/'
+xslt: 'https://tw.rpi.edu/xslt/'
+instances_uri: 'http://tw.rpi.edu/instances/'
+schema_uri: 'http://tw.rpi.edu/schema/'
+enable_php_xslt_extensions: 0
+enable_debug: 0
+

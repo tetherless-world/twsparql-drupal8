@@ -1,0 +1,8 @@
+name: TW Sparql
+description: Provides a &lt;sparql&gt; tag that can be used for rendering external SPARQL queries inside of node bodies
+core: 8.x
+package: "RDF"
+version: "1.0"
+type: module
+configure: twsparql.settings
+php: 5.6

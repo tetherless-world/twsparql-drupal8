@@ -1,0 +1,6 @@
+twsparql:
+  version: 1.x
+  js:
+    js/twsparql.js: {}
+  dependencies:
+    - core/jquery
