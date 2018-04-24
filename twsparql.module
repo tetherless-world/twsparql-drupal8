@@ -6,14 +6,14 @@ use Drupal\Core\Routing\RouteMatchInterface;
 
 include_once('DrupalTWSparql.inc');
 
-function twsparql_node_delete(EntityInterface $entity) {
+function twsparql_entity_delete(EntityInterface $entity) {
 }
 
-function twsparql_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+function twsparql_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
 	$build['body'][0]["#text"] = TWSparql::$engine->render( 1, $build['body'][0]["#text"] );
 }
 
-function twsparql_node_update(EntityInterface $entity) {
+function twsparql_entity_update(EntityInterface $entity) {
 }
 
 function twsparql_help($route_name, RouteMatchInterface $route_match) {
