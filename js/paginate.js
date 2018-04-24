@@ -15,7 +15,8 @@ function loadPage(year, page) {
         window.node = node;
         const toReplace = document.querySelector(".person-publications-paginate-footer");
         toReplace.parentNode.replaceChild(node, toReplace);
-        window.pageFooter.querySelectorAll("span.page").forEach((element) => {
+        window.activePage = node.querySelector("span.selected");
+        node.querySelectorAll("span.page").forEach((element) => {
           element.onclick = (e) => {
             const pageOffset = e.target.innerText || e.target.textContent;
             const yearNumber = window.activeYear.innerText || window.activeYear.textContent;
@@ -32,7 +33,6 @@ function loadPage(year, page) {
   }
   const offset = page*10;
   const endpoint = `${window.twsparql}?uri=${window.instanceURI}&query=person-publications-paginate.rq&xslt=generate/person-publications-paginate.xsl&year=${year}&limig=${window.pageLimit}&offset=${offset}`
-  console.log(endpoint);
   fetch(endpoint)
     .then((response) => {
       return response.text()
@@ -40,7 +40,6 @@ function loadPage(year, page) {
     .then((text) => {
       const parser = new DOMParser();
       const doc = parser.parseFromString(text, "application/xml");
-      console.log(doc);
       window.data = doc;
       const elem = doc.querySelector(".papers-list");
       window.elem = elem;
