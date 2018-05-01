@@ -10,7 +10,9 @@ function twsparql_entity_delete(EntityInterface $entity) {
 }
 
 function twsparql_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
-	$build['body'][0]["#text"] = TWSparql::$engine->render( 1, $build['body'][0]["#text"] );
+    if($build['body'] && $build['body'][0]) {
+      $build['body'][0]["#text"] = TWSparql::$engine->render( 1, $build['body'][0]["#text"] );
+    }
 }
 
 function twsparql_entity_update(EntityInterface $entity) {
